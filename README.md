@@ -1,8 +1,16 @@
 # Klipper_Gcode_Cleanup
-Uses a cronjob to cleanup gcode. Not aware of subfolders.
+Uses a simple cronjob to cleanup gcode. Not aware of subfolders.
 
 On the klipper host:
 
+If you want to test to see results before running: 
+
+  find ~/printer_data/gcodes -type f -name "*.gcode" -mtime +30
+
+Then manually find and delete:
+
+  find ~/printer_data/gcodes -type f -name "*.gcode" -mtime +30 -delete
+  
 1. run crontab
 
   crontab -e
